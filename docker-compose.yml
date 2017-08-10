@@ -8,13 +8,13 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /Users/rachel/Docker/simple-docker/www:/var/www/html
+      - ./www:/var/www/html
     links:
       - db
 
   db:
     image: mysql:5.7
-    ports: 
+    ports:
       - "3306:3306"
     volumes:
       - ./db:/var/lib/mysql
